@@ -26,22 +26,18 @@ namespace Codecademy_C_Sharp_Exquisite_Corpse
             Console.WriteLine("Monster:");
             BuildACreature("monster", "monster", "monster");
             NL();
-            NL();
 
             Console.WriteLine("Random:");
-            NL();
             RandomMode();
-            NL();
-            RandomMode();
-            NL();
-            RandomMode();
+       
+            Console.ReadKey();
         }
 
         static void BuildACreature(string head, string body, string feet)
         {
-            int headNum = TranslateToNumber("head");
-            int bodyNum = TranslateToNumber("body");
-            int feetNum = TranslateToNumber("feet");
+            int headNum = TranslateToNumber(head);
+            int bodyNum = TranslateToNumber(body);
+            int feetNum = TranslateToNumber(feet);
             SwitchCase(headNum, bodyNum, feetNum);
         }
 
@@ -102,7 +98,7 @@ namespace Codecademy_C_Sharp_Exquisite_Corpse
             }
         }
 
-        static void TranslateToNumber(string creature)
+        static int TranslateToNumber(string creature)
         {
             switch (creature)
             {
@@ -166,7 +162,7 @@ namespace Codecademy_C_Sharp_Exquisite_Corpse
             Console.WriteLine("     _____");
             Console.WriteLine(" .-,;='';_),-.");
             Console.WriteLine("  \\_\\(),()/_/");
-            Console.WriteLine("　  (,___,)");
+            Console.WriteLine("　   (,___,)");
         }
 
         static void MonsterBody()
@@ -182,6 +178,5 @@ namespace Codecademy_C_Sharp_Exquisite_Corpse
             Console.WriteLine("   /   |   \\");
             Console.WriteLine("   \"\"\"\" \"\"\"\"");
         }
-    }
     }
 }
